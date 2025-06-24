@@ -1,4 +1,6 @@
 
+@import './marquee.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -93,10 +95,12 @@
 
   body {
     @apply bg-background text-foreground;
+    min-height: 100vh;
   }
 
   html {
     scroll-behavior: smooth;
+    min-height: 100vh;
   }
 }
 

@@ -3,6 +3,7 @@ import React from 'react';
 import { Clock, Shield, Award, Users, Globe, CheckCircle } from 'lucide-react';
 
 const FeaturesGrid = () => {
+  const [isHovered, setIsHovered] = React.useState(false);
   const features = [
     {
       icon: Clock,
@@ -61,16 +62,20 @@ const FeaturesGrid = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section
+      className={`py-20 transition-colors duration-500 `}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose FoodCert Pro?</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className={`text-4xl font-bold mb-4  text-[#3B7A57] `}>Why Choose FoodCert Pro?</h2>
+          <p className={`text-xl max-w-3xl mx-auto ${isHovered ? 'text-gray-900' : 'text-gray-600'}`}>
             Experience the difference with our comprehensive approach to food safety and certification services.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex overflow-x-auto pb-4 space-x-8 scrollbar-hide">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             const colorClasses = getColorClasses(feature.color);
@@ -78,7 +83,7 @@ const FeaturesGrid = () => {
             return (
               <div
                 key={index}
-                className="group relative bg-white p-8 rounded-2xl border border-gray-100 hover:border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                className={`group relative bg-white p-8 rounded-2xl border border-gray-100 hover:border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex-shrink-0 w-80 ${isHovered ? 'flip-scale-2-hor-top' : ''}`}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
@@ -87,11 +92,11 @@ const FeaturesGrid = () => {
                     <Icon className={`h-8 w-8 text-${feature.color}-600`} />
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors">
+                  <h3 className={`text-2xl font-bold mb-4 ${isHovered ? 'text-[#3B7A57]' : 'text-gray-900'} group-hover:text-gray-800 transition-colors`}>
                     {feature.title}
                   </h3>
                   
-                  <p className="text-gray-600 leading-relaxed mb-6">
+                  <p className={`leading-relaxed mb-6 ${isHovered ? 'text-gray-400' : 'text-gray-600'}`}>
                     {feature.description}
                   </p>
                   
@@ -109,12 +114,12 @@ const FeaturesGrid = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-emerald-500 to-blue-600 p-8 rounded-2xl text-white">
+          <div className={`p-8 rounded-2xl text-white transition-colors duration-500 ${isHovered ? 'bg-gradient-to-r from-gray-700 to-gray-800' : 'bg-gradient-to-r from-emerald-500 to-blue-600'}`}>
             <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
             <p className="text-xl mb-6 opacity-90">
               Join hundreds of businesses that trust us with their food safety certification needs.
             </p>
-            <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center space-x-2">
+            <button className={`px-8 py-4 rounded-lg font-semibold transition-colors duration-200 inline-flex items-center space-x-2 ${isHovered ? 'bg-gray-200 text-gray-800 hover:bg-gray-300' : 'bg-white text-emerald-600 hover:bg-gray-100'}`}>
               <span>Schedule Your Inspection</span>
               <CheckCircle className="h-5 w-5" />
             </button>
