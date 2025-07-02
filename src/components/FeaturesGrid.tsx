@@ -77,7 +77,7 @@ const FeaturesGrid = () => {
           </div>
         </div>
 
-        <div className="flex overflow-x-auto pb-4 space-x-8 scrollbar-hide">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             const colorClasses = getColorClasses(feature.color);
@@ -85,7 +85,7 @@ const FeaturesGrid = () => {
             return (
               <div
                 key={index}
-                className={`group relative bg-white p-8 rounded-2xl border border-gray-100 hover:border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex-shrink-0 w-80 ${isHovered ? 'flip-scale-2-hor-top' : ''}`}
+                className={`group relative bg-white p-8 rounded-2xl border border-gray-100 hover:border-gray-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 ${isHovered ? 'flip-scale-2-hor-top' : ''}`}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 

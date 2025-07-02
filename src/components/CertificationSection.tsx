@@ -39,7 +39,7 @@ const CertificationSection: React.FC<CertificationSectionProps> = ({
         </div>
         <div className="lg:w-1/2 flex justify-center">
           <div className="bg-white p-4 rounded-xl shadow-2xl ring-1 ring-gray-200 transform translate-y-[-8px] hover:scale-105 transition-transform duration-300 ease-in-out" style={{ boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.06)' }}>
-            <img src={person} alt={imageAlt} className=" rounded-lg w-full h-[70vh] object-cover " />
+            <img src={person} alt={imageAlt} className="rounded-lg w-full h-auto max-h-[50vh] object-cover" />
           </div>
         </div>
       </div>

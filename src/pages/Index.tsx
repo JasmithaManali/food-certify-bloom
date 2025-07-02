@@ -27,7 +27,7 @@ import Kitchen from '../assets/Kitchen.webp';
 import KumarMess from '../assets/Kumar Mess.webp';
 import MuruganIdly from '../assets/Murugan Idly.webp';
 import PeramburSrinivasa from '../assets/PERAMBUR SRINIVASA.webp';
-import RaddissonBlu from '../assets/RADDISSON BLU .webp';
+import RaddissonBlu from '../assets/radisson.png';
 import RKGLogo from '../assets/RKG LOGO.webp';
 import SaharaHospitalityMumbai from '../assets/SAHARA HOSPITALITY MUMBAI.webp';
 import Sapphire from '../assets/Sapphire.webp';

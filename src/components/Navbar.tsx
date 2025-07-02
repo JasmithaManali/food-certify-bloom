@@ -18,8 +18,11 @@ const Navbar = () => {
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
     { name: 'About', href: '#about' },
-    { name: 'Process', href: '#process' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Policies', href: '#policies' },
+    { name: 'Accreditation', href: '#Accreditation' },
+    { name: 'Major Certifications', href: '#Major Certifications' },
+    { name: 'Gallery', href: '#Gallery' },
+    { name: 'Complaints', href: '#Complaints' },
   ];
 
   return (
@@ -29,19 +32,17 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-2">
-            {/* <ShieldCheck className="h-8 w-8 text-emerald-600" /> */}
             <img src={unavar} alt="" style={{
               width:'30%',
               height:'30%',
-              objectFit:'contain'
-
-
+              objectFit:'contain',
+              justifyContent:'flex-start'
             }} />
             <span className="font-bold text-xl text-gray-900">Unavar</span>
           </div>
           
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="flex items-baseline space-x-8 justify-end">
               {navItems.map((item) => (
                 <a
                   key={item.name}
