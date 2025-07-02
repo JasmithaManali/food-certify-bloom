@@ -67,12 +67,14 @@ const FeaturesGrid = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className={`text-4xl font-bold mb-4  text-[#3B7A57] `}>Why Choose FoodCert Pro?</h2>
+      <div className="max-w-7xl mx-auto   px-4 sm:px-6 lg:px-8 ">
+        <div className="text-center mb-20">
+          <div className='mt-20'>
+          <h2 className={`text-4xl font-bold mb-4  text-[#3B7A57] `}>Why Choose Unavar?</h2>
           <p className={`text-xl max-w-3xl mx-auto ${isHovered ? 'text-gray-900' : 'text-gray-600'}`}>
             Experience the difference with our comprehensive approach to food safety and certification services.
           </p>
+          </div>
         </div>
 
         <div className="flex overflow-x-auto pb-4 space-x-8 scrollbar-hide">
@@ -113,7 +115,7 @@ const FeaturesGrid = () => {
           })}
         </div>
 
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className={`p-8 rounded-2xl text-white transition-colors duration-500 ${isHovered ? 'bg-gradient-to-r from-gray-700 to-gray-800' : 'bg-gradient-to-r from-emerald-500 to-blue-600'}`}>
             <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
             <p className="text-xl mb-6 opacity-90">
@@ -124,7 +126,7 @@ const FeaturesGrid = () => {
               <CheckCircle className="h-5 w-5" />
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

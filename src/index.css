@@ -6,7 +6,13 @@
 @tailwind utilities;
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
-
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;

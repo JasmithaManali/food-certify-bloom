@@ -20,7 +20,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
+				sans: ['sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -123,9 +123,23 @@ export default {
         gradient: 'gradient 8s linear infinite'
 			},
       backgroundImage: {
-        'gradient-ui': 'linear-gradient(to bottom, #E0F2F7, #B2EBF2)', // A soft blue-green gradient
-      }
-		}
-	},
-	plugins: [require("tailwindcss-animate")],
+        // 'gradient-ui': 'linear-gradient(to bottom, #E0F2F7, #B2EBF2)', // A soft blue-green gradient
+      },
+      transform: {
+        'rotate-y-10': 'rotateY(10deg)',
+        '-rotate-y-10': 'rotateY(-10deg)',
+        'translate-z-[-50px]': 'translateZ(-50px)',
+      },
+      perspective: {
+        '1000': '1000px',
+      },
+      transformStyle: {
+        'preserve-3d': 'preserve-3d',
+      },
+    }
+  },
+  corePlugins: {
+    preflight: false,
+  },
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
